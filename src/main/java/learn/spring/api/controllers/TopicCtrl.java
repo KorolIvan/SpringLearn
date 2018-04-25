@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Ivan Korol on 4/24/2018
@@ -21,7 +22,7 @@ public class TopicCtrl {
     }
 
     @RequestMapping("/topics/{id}")
-    public Topic getTopic(@PathVariable String id) {
+    public Optional<Topic> getTopic(@PathVariable String id) {
         return topicService.getTopic(id);
     }
 

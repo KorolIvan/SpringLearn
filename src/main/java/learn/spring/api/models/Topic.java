@@ -1,9 +1,15 @@
 package learn.spring.api.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * @author Ivan Korol on 4/24/2018
  */
+@Entity
 public class Topic {
+
+    @Id
     private String id;
     private String name;
     private String description;
